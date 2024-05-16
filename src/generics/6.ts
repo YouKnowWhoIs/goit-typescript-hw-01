@@ -13,4 +13,4 @@ type Form = {
   errors: Errors;
 };
 
-type Params = Pick<Form, "email" | "firstName" | "lastName" | "phone">;
+type Params = Omit<Form, "errors">;
